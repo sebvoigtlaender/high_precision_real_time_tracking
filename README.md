@@ -5,4 +5,4 @@ Here an example of zebrafish larva in behavioral chamber:
 
 ![](/media/fish_tracking.mov)
 
-Code will be made public soon!# high_precision_real_time_tracking
+Code will be made public soon!
