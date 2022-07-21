@@ -5,7 +5,7 @@ PyTorch package to enable real-time tracking of freely behaving specimens with h
 Here an example of a zebrafish larva in a behavioral chamber (512 x 512 pxl, red cross is the tracker):
 
 
-https://user-images.githubusercontent.com/43091450/179960572-bf3eab81-c8aa-4cd2-8727-74023e583c9a.mov
+https://user-images.githubusercontent.com/43091450/180216678-18efb085-87b4-4462-8c81-f2cd6e9ea18d.mp4
 
 
 Code will be made public soon!
