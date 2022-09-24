@@ -9,4 +9,3 @@ https://user-images.githubusercontent.com/43091450/188277834-35c8ed09-43a9-4e47-
 
 
 ![Alt text](./tracking-cropped.svg)
-<img src="./tracking-cropped.svg">
