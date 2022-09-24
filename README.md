@@ -8,5 +8,5 @@ Here an example of a zebrafish (danio rerio) larva in a behavioral chamber (512 
 https://user-images.githubusercontent.com/43091450/188277834-35c8ed09-43a9-4e47-a016-41ec4c3800bc.mp4
 
 
-![Alt text](./tracking_cropped.svg)
-<img src="./tracking_cropped.svg">
+![Alt text](./tracking-cropped.svg)
+<img src="./tracking-cropped.svg">
