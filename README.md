@@ -4,5 +4,5 @@ PyTorch package for high precision, ultra low latency behavioral tracking (< 4 m
 
 <img src="./tracking.svg" width=100% height=100%>
 
-a: Trace of larval zebrafish (danio rerio) in behavioral arena over the course of a 1.68 million frame experiment (112 minutes).\
-b: The specimen freely moves in the arena while being tracked. Relevant behavioral data can accurately be recorded in real time with high temporal resolution, enabling the study of corresponding neural activity during unconstrained behavior.
+a) Trace of larval zebrafish (danio rerio) in behavioral arena over the course of a 1.68 million frame experiment (112 minutes).\
+b) The specimen freely moves in the arena while being tracked. Relevant behavioral data can accurately be recorded in real time with high temporal resolution, enabling the study of corresponding neural activity during unconstrained behavior.
