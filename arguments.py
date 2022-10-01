@@ -1,0 +1,42 @@
+import argparse
+import torch
+
+def get_args():
+    parser = argparse.ArgumentParser(description='tracking')
+    parser.add_argument('--batch-size', type=int, default=32, help='training batch size (default: 32)')
+    parser.add_argument('--core-type', type=str, default='resnet_18', help='model core type (default: resnet-18)')
+    parser.add_argument('--cross-val-every', type=int, default=10000, help='cross_validate model every n episodes (default: 10000)')
+    parser.add_argument('--device', default='cpu', help='device (default: cpu)')
+    parser.add_argument('--device-idx', default=0, help='device idx (default: 0)')
+    parser.add_argument('--fine-tune', type=bool, default=False, help='fine tune trained model (default: False)')
+    parser.add_argument('--H', type=int, default=2048, help='background height (default: 2048)')
+    parser.add_argument('--h', type=int, default=512, help='input height (default: 512)')
+    parser.add_argument('--high-pass-filter', type=float, default=3e-2, help='high pass filter (default: 3e-2)')
+    parser.add_argument('--k', type=int, default=5, help='k for k-fold cross validation (default: 5)')
+    parser.add_argument('--len-cross-val', type=int, default=1000, help='number of frames for cross validation per dataset (default: 1000)')
+    parser.add_argument('--len-dataset', type=int, default=4800, help='number of frames in dataset (default: 4800)')
+    parser.add_argument('--load-every', type=int, default=500, help='load data every load_every episodes (default: 500)')
+    parser.add_argument('--load-pretrained', type=bool, default=False, help='load pretrained state_dict (default: False)')
+    parser.add_argument('--lr', type=float, default=0.0003, help='learning rate (default: 0.0003)')
+    parser.add_argument('--max-len-block', type=int, default=10000000, help='indices per index block during eval and test (default: 10000000)')
+    parser.add_argument('--min-len-block', type=int, default=1000, help='minimum length of contiguous index block (default: 1000)')
+    parser.add_argument('--max-n-reject', type=int, default=100, help='max number of reject() calls before continue (default: 100)')
+    parser.add_argument('--n-episodes', type=int, default=30000, help='number of training episodes (default: 30000)')
+    parser.add_argument('--n-epochs-opt-hyperp', type=int, default=100, help='number of hyperparameter optimization frames (default: 100)')
+    parser.add_argument('--n-frames-opt-hyperp', type=int, default=100000, help='number of frames for hyperparameter optimization (default: 100000)')
+    parser.add_argument('--no-cuda', action='store_true', default=False, help='disables CUDA training')
+    parser.add_argument('--pixel-cutoff', type=int, default=12, help='error tolerance threshold (default: 12)')
+    parser.add_argument('--precision', type=str, default='fp32', help='inference floating point precision (default: 32)')
+    parser.add_argument('--prioritized-batching', type=bool, default=True, help='load dataset with prioritized batching (default: True)')
+    parser.add_argument('--save-every', type=int, default=1000, help='save model every save_every episodes (default: 1000)')
+    parser.add_argument('--seed', type=int, default=1, help='random seed (default: 1)')
+    parser.add_argument('--T-pixel-cutoff', type=float, default=0, help='decay rate pixel cutoff during training (default: 0)')
+    parser.add_argument('--test-baseline', type=bool, default=True, help='run baseline test to collect coordinates (default: False)')
+    parser.add_argument('--W', type=int, default=2448, help='background width (default: 2448)')
+    parser.add_argument('--weight-decay', type=float, default=0.0, help='weight decay (default: 0.0)')
+    
+    args = parser.parse_args(args = [])
+    # args = parser.parse_args()
+    args.cuda = not args.no_cuda and torch.cuda.is_available()
+
+    return args
