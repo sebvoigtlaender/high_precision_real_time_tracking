@@ -2,19 +2,16 @@ from collections import OrderedDict
 from typing import Any, Callable, List, Optional, Tuple, Type, Union
 
 import numpy as np
-import numpy.random as rnd
 
-import torch
 import torch as pt
 import torch.nn as nn
 from torch import Tensor
 
 import torchvision
-import torchvision.models as models
 from torchvision.models.resnet import conv1x1, BasicBlock, Bottleneck
 
-from general_utils import ListType, TensorType
-from data_utils import gaussian_blur
+from ops.general_utils import ListType, TensorType
+from ops.data_utils import gaussian_blur
 
 
 class ResNet(nn.Module):

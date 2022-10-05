@@ -31,11 +31,11 @@ def get_config(args: Mapping[str, Any]) -> Mapping[str, Any]:
 def get_path_dict(key: str) -> Mapping[str, Any]:
     path_dict = dict()
     if key == 'train':
-        path_dict[0] = 'tutorial/train_dataset.pkl'
+        path_dict[0] = 'data/train_dataset.pkl'
     elif key == 'eval':
-        path_dict[0] = 'tutorial/eval_dataset.pkl'
+        path_dict[0] = 'data/eval_dataset.pkl'
     elif key == 'search-hp':
-        path_dict[0] = 'tutorial/eval_dataset.pkl'
+        path_dict[0] = 'data/eval_dataset.pkl'
     elif key == 'test':
-        path_dict[0] = 'tutorial/test_dataset.pkl'
+        path_dict[0] = 'data/test_dataset.pkl'
     return path_dict

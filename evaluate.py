@@ -7,14 +7,12 @@ from tqdm import tqdm
 import numpy as np
 import torch as pt
 
-from arguments import get_args
-from config import get_config, get_path_dict
-from file_sys_utils import file_close, get_path_to_result, get_path_to_file
-from data_utils import get_x, get_ground_truth
-from general_utils import find_coordinate_baseline, find_coordinate_with_prior, find_coordinate_with_prior_no_model, get_candidate_coordinates_and_peaks, contiguous_idx_blocks, get_hp
-from model import Model
-
-import matplotlib.pyplot as plt
+from ops.arguments import get_args
+from ops.config import get_config, get_path_dict
+from ops.file_sys_utils import file_close, get_path_to_result, get_path_to_file
+from ops.data_utils import get_x, get_ground_truth
+from ops.general_utils import find_coordinate_baseline, find_coordinate_with_prior, find_coordinate_with_prior_no_model, get_candidate_coordinates_and_peaks, contiguous_idx_blocks, get_hp
+from ops.model import Model
 
 
 def eval_baseline(args: Mapping[str, Any],

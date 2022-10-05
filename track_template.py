@@ -1,19 +1,17 @@
-import os, pickle, h5py, sys
+import os, h5py, sys
 from typing import Any, Mapping
 
 from absl import logging
-from tqdm import tqdm
 
 import numpy as np
 import torch as pt
 
-from arguments import get_args
-from config import get_config, get_path_dict
-from file_sys_utils import file_close, file_get_n_frames, get_path_to_result
-from data_utils import get_x, get_ground_truth
-from general_utils import find_coordinate_baseline, find_coordinate_with_prior, get_hp
-from model import Model
-from tracking_utils import get_x_tracking, get_ground_truth_tracking, update_anchor_coordinates
+from ops.arguments import get_args
+from ops.config import get_config
+from ops.file_sys_utils import file_close, get_path_to_result
+from ops.general_utils import find_coordinate_baseline, find_coordinate_with_prior, get_hp
+from ops.model import Model
+from ops.tracking_utils import update_anchor_coordinates
 
 logging.get_absl_handler().python_handler.stream = sys.stdout
 logging.set_verbosity(logging.INFO)
